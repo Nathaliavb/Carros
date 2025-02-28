@@ -5,9 +5,13 @@ import os
 import environ
 
 
+
+
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 env = environ.Env()
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+
 
 
 openai.api_key = env('OPENAI_API_KEY')
